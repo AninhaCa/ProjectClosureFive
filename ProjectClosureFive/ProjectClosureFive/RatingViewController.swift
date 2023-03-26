@@ -8,22 +8,22 @@
 import UIKit
 
 class RatingViewController: UIViewController {
-
+    
+    @IBOutlet var imageRating: UIImageView!
+    @IBOutlet var labelName: UILabel!
+    @IBOutlet var labelRating: UILabel!
+    
+    var ratingPizza: PizzaElement?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        labelName.text = "AVALIAÇÃO CLIENTE"
+        labelRating.text = "Para nossos clientes, a pizza \(ratingPizza?.name ?? "") esta na posiçao \(ratingPizza?.rating ?? 0) /5 - de aprovação"
+        let urlImage = URL(string: ratingPizza?.imageURL ?? "")
+        imageRating.sd_setImage(with: urlImage)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true)
     }
-    */
-
 }
