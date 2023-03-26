@@ -16,6 +16,8 @@
 		7782246F29D0E6380053095E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7782246D29D0E6380053095E /* LaunchScreen.storyboard */; };
 		778CD98529D0EF6900AB31DF /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778CD98429D0EF6900AB31DF /* Pizza.swift */; };
 		778CD98729D0EFC500AB31DF /* RequestPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778CD98629D0EFC500AB31DF /* RequestPizza.swift */; };
+		778CD98A29D0F3AE00AB31DF /* MyCustomCellXIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778CD98829D0F3AE00AB31DF /* MyCustomCellXIB.swift */; };
+		778CD98B29D0F3AE00AB31DF /* MyCustomCellXIB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 778CD98929D0F3AE00AB31DF /* MyCustomCellXIB.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		7782247029D0E6380053095E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		778CD98429D0EF6900AB31DF /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		778CD98629D0EFC500AB31DF /* RequestPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPizza.swift; sourceTree = "<group>"; };
+		778CD98829D0F3AE00AB31DF /* MyCustomCellXIB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCellXIB.swift; sourceTree = "<group>"; };
+		778CD98929D0F3AE00AB31DF /* MyCustomCellXIB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCustomCellXIB.xib; sourceTree = "<group>"; };
 		90C2BD0758EBD31CF16DF346 /* Pods_ProjectClosureFive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectClosureFive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A95EC08CEE61A1D7B6A69F8D /* Pods-ProjectClosureFive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectClosureFive.release.xcconfig"; path = "Target Support Files/Pods-ProjectClosureFive/Pods-ProjectClosureFive.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +76,8 @@
 				778CD98429D0EF6900AB31DF /* Pizza.swift */,
 				778CD98629D0EFC500AB31DF /* RequestPizza.swift */,
 				7782246629D0E6360053095E /* ViewController.swift */,
+				778CD98829D0F3AE00AB31DF /* MyCustomCellXIB.swift */,
+				778CD98929D0F3AE00AB31DF /* MyCustomCellXIB.xib */,
 				7782246829D0E6360053095E /* Main.storyboard */,
 				7782246B29D0E6380053095E /* Assets.xcassets */,
 				7782246D29D0E6380053095E /* LaunchScreen.storyboard */,
@@ -156,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				778CD98B29D0F3AE00AB31DF /* MyCustomCellXIB.xib in Resources */,
 				7782246F29D0E6380053095E /* LaunchScreen.storyboard in Resources */,
 				7782246C29D0E6380053095E /* Assets.xcassets in Resources */,
 				7782246A29D0E6360053095E /* Main.storyboard in Resources */,
@@ -213,6 +220,7 @@
 			files = (
 				778CD98529D0EF6900AB31DF /* Pizza.swift in Sources */,
 				7782246729D0E6360053095E /* ViewController.swift in Sources */,
+				778CD98A29D0F3AE00AB31DF /* MyCustomCellXIB.swift in Sources */,
 				7782246329D0E6360053095E /* AppDelegate.swift in Sources */,
 				778CD98729D0EFC500AB31DF /* RequestPizza.swift in Sources */,
 				7782246529D0E6360053095E /* SceneDelegate.swift in Sources */,
