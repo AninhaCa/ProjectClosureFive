@@ -9,11 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
+    
+    var arraypizza: Pizza?
+    
+    let request = RequestPizza()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupTableView()
     }
-
-
+    
+    func setupTableView() {
+        request.requestPizza { pizza in
+            self.arraypizza = pizza
+            self.tableView.reloadData()
+        }
+    }
 }
-
