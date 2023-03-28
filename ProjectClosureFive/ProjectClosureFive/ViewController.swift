@@ -18,20 +18,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        myRequest()
     }
     
     func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "MyCustomCellXIB", bundle: nil), forCellReuseIdentifier: "cellXIB")
-        request.requestPizza { pizza in
-            self.arraypizza = pizza
-            self.tableView.reloadData()
+    }
+    
+    func myRequest() {
+        request.delegate = self
+        request.requestPizza { arrayPizza in
         }
     }
 }
 
-extension ViewController:UITableViewDataSource {
+extension ViewController: RequestDelegate {
+    func finishRequest(arrayPizza: Pizza?) {
+        self.arraypizza = arrayPizza
+        self.tableView.reloadData()
+    }
+    
+    func erroRequest() {
+        print ("erro a resquest")
+    }
+}
+
+extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arraypizza?.count ?? 0
     }
