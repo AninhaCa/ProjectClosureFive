@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
-    var arraypizza: Pizza?
+    var arrayPizza: Pizza?
     
     let request = RequestPizza()
     
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
 
 extension ViewController: RequestDelegate {
     func finishRequest(arrayPizza: Pizza?) {
-        self.arraypizza = arrayPizza
+        self.arrayPizza = arrayPizza
         self.tableView.reloadData()
     }
     
