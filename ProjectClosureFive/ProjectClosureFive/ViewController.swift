@@ -47,12 +47,12 @@ extension ViewController: RequestDelegate {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arraypizza?.count ?? 0
+        return arrayPizza?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cellXIB", for: indexPath) as? MyCustomCellXIB {
-            cell.setupXIB(pizza: arraypizza?[indexPath.row])
+            cell.setupXIB(pizza: arrayPizza?[indexPath.row])
             
             return cell
         }
@@ -64,7 +64,7 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let priceView = self.storyboard?.instantiateViewController(identifier: "price") as? PriceViewController {
-            priceView.pricePizza = arraypizza?[indexPath.row]
+            priceView.pricePizza = arrayPizza?[indexPath.row]
             self.present(priceView, animated: true)
         }
     }
